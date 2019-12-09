@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes sunshine {
+            0% {
+                filter: drop-shadow(0 0 10px yellow);
+            }
+
+            100% {
+                filter: drop-shadow(0 0 30px yellow);
+            }
+        }
+        @keyframes rotate{
+            0%{
+                /* rotate translate 順序有影響*/
+                transform: rotate(0) translate(200px, 0);
+            }
+            100%{
+                transform: rotate(360deg) translate(200px, 0);
+            }
+        }
+        @keyframes moonRotate{
+            0%{
+                transform: rotate(0) translate(60px, 0);
+            }
+            100%{
+                transform: rotate(360deg) translate(60px, 0);
+            }
+        }
+
+        body {
+            background: url(images/space-bg.jpg);
+        }
+
+        .wrapper {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            /* border: 1px solid #ccc;
+            border-radius: 50%; */
+            position: relative;
+        }
+
+        .earth_orbit {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            /* transform: translate(-50%, -50%); */
+
+        }
+
+        .sun {
+            margin: -64px 0 0 -64px;
+            animation: sunshine 1s infinite alternate;
+        }
+        .earth_wrap{
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -60px 0 0 -60px;
+            animation: rotate 8s infinite linear;
+
+        }
+        .earth {
+            /* transform: translate(200px, 0); */
+            /* animation: rotate 4s infinite linear; */
+            margin: -36px 0 0 -36px;
+            filter: drop-shadow(0 0 10px rgb(54, 170, 238));
+        }
+        .moon{
+            margin: -24px 0 0 -24px;
+            animation: moonRotate 2s infinite linear;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="earth_orbit"></div>
+        <img class="sun planet" src="images/sun.png" alt="">
+        <div class="earth_wrap">
+                <img class="earth planet" src="images/earth.png" alt="">
+                <img class="planet moon" src="images/moon.png" alt="">
+            </div>
+    
+    </div>
+</body>
+
+</html>

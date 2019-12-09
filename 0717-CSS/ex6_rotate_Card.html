@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .card {
+            position: relative;
+            transition: .5s;
+            /* 圖大小 */
+            width: 400px;
+            height: 560px;
+            /* flat 子元素将不保留其 3D 位置, preserve-3d 子元素将保留其 3D 位置*/
+            transform-style: preserve-3d;
+
+        }
+
+        .wrap:hover .card {
+            transform: rotateY(180deg);
+        }
+        .wrap{
+            background: lavender
+        }
+        .card img {
+            position: absolute;
+            backface-visibility: hidden;
+        }
+        .back{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="card">
+            <img class="back" src="images/dr_fate.jpg" alt="">
+            <img src="images/card.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

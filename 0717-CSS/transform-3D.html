@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform-3D</title>
+    <style>
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            /* perspective: 500px; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightcoral;
+            transition: .5s;
+            margin: 10px;
+        }
+
+        img {
+            transition: .5s;
+        }
+
+        .box_wrap {
+            /* 想像成物件距離螢幕的距離，如果值越大代表越遠 */
+            perspective: 500px;
+        }
+
+
+        .translate:hover {
+            transform: translate3d(20px, 20px, 20px);
+        }
+
+        .rotate:hover {
+            transform: rotateX(50deg);
+        }
+
+        .card {
+            perspective: 500px;
+            width: 200px;
+            margin: 10px;
+        }
+        .perspective_origin{
+            perspective-origin: left top;
+        }
+        .per100 {
+            perspective: 100px;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card_rotate:hover img {
+            transform: rotateX(30deg);
+            /* transform: rotate3d(1, 2, 3, 20deg); */
+        }
+
+        .transform_ori {
+            /* 變形中心點 */
+            transform-origin: left top;
+        }
+
+        .wrapper {
+            display: flex;
+            background-color: #aaa;
+            perspective: 500px;
+        }
+
+        .wrapper .card {
+            transform: rotateY(20deg);
+            transition: .5s;
+        }
+
+        .wrapper .card:hover img{
+            /* transform: translateY(20px); */
+            transform: rotateY(-30deg);
+        }
+        .turn:hover img{
+            transform: rotateY(180deg);
+        }
+        .hidden{
+            backface-visibility: hidden;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- 區塊比較大習慣用section -->
+    <section class="container">
+        <div class="box_wrap">
+            <div class="box translate">
+
+            </div>
+        </div>
+        <div class="box_wrap">
+            <div class="box rotate">
+
+            </div>
+        </div>
+
+        <!-- 分隔 -->
+        <div style="width: 100%"></div>
+
+        <div class="card card_rotate">
+            <img class="rotate" src="images/dr_strange.jpg" alt="">
+        </div>
+        <div class="card card_rotate perspective_origin">
+            <img class="rotate" src="images/dr_strange.jpg" alt="">
+        </div>
+        <div class="card card_rotate">
+            <img class="transform_ori" src="images/dr_strange.jpg" alt="">
+        </div>
+        <div style="width: 100%;"></div>
+
+        <div class="wrapper">
+            <div class="card">
+                <img class="" src="images/dr_strange.jpg" alt="">
+            </div>
+            <div class="card">
+                <img class="" src="images/dr_strange.jpg" alt="">
+            </div>
+        </div>
+
+        <div style="width: 100%"></div>
+        <div class="card turn">
+                <img class="" src="images/dr_strange.jpg" alt="">
+        </div>
+        <div class="card turn">
+                <img class="hidden" src="images/dr_strange.jpg" alt="">
+        </div>
+
+    </section>
+</body>
+
+</html>

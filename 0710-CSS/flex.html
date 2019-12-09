@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex</title>
+    <style>
+        .wrapper{
+            max-width: 960px;
+            /* height: 600px; */
+            background: #eee;
+            margin: 0 auto;
+            /* display: flex; */
+        }
+        .flex{
+            background: plum;
+            /* display: inline-flex; */
+            /* flex只影響一層,inline-flex會把背景縮到內層物件 */
+            display: flex;
+            height: 800px;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* justify-content: flex-end,space-evenly; */
+            /* flex-direction: column; */
+            justify-content: center;
+            /* align-items: center; */
+            /* flex-wrap: wrap; */
+            /* align-content: flex-start; */
+           /* flex-wrap: wrap;*/
+            flex-flow: row wrap;
+        }
+        .box{
+            width: 120px;
+            /* height: 120px; */
+            background: lightblue;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+             /* flex-grow:1; 把剩餘空間分給4個box */
+            /* flex-grow: 1; */
+            /* flex-shrink: 0; */
+            
+        }
+        .box1{
+            /* 把剩餘空間分給指定box  */
+            /* width: 240px; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 2; */
+            /* flex-basis: 240px; */
+            /* grow,shrink,basis */
+            flex: 0 1 240px;
+            align-self: flex-start;
+        }
+        .box2{
+            /* flex-grow: 5; */
+            order: -1;
+        }
+        .box3{
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flex">
+            <div class="box box1">1</div>
+            <span class="box box2">2</span>
+            <div class="box box3">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- margin: 15px 10px 5px 2px(上右下左) -->
+    <!-- margin: 15px 10px (上下 左右) -->
+    <!-- margin: 15px 10px 5px (上 左右 下) -->
+    <!-- margin: 15px (上下左右) -->
+    <link rel="stylesheet" href="main.css"> <!-- 把預設值都拿掉 -->
+    <style>
+        #wrap{
+            width: 800px;
+            background: rgb(211, 207, 207)
+        }
+        header{
+            height: 100px;
+            background: rgb(241, 228, 104);
+        }
+        h1{
+            font-size: 30px;
+            padding: 10px;
+        }
+        nav{
+            padding: 20px;
+            background: rgb(142, 243, 129);
+        }
+        nav ul li{   /* 後代選取器 只控制最後一個( li ) */
+            display: inline-block;   /* 水平排列 */
+            margin-right: 20px;
+            font-size: 20px;
+        }
+        nav a{
+            text-decoration: none;
+        }
+        nav a:hover{
+            color: rgb(246, 160, 0);
+        }
+        section{
+            width:500px;
+            height: 100px;
+            float: left;
+            background: rgb(202, 165, 250);
+        }
+        aside{
+            width: 300px;
+            height: 50px;
+            float: right;
+            background-color: rgb(211, 110, 110)
+        }
+        footer{
+            background: rgb(231, 190, 101);
+            padding: 20px;
+            text-align: center;
+            clear: both; /* 如果section and aside的width加起來不到wrap的800 沒有這行就會溢出footer的顏色過去 */
+        }
+    </style>
+
+</head>
+<body>
+    <!-- #wrap>(header>h1{網站名稱})+(nav>ul>li*3>a{BTN$})+(section>article>h2{我是大標題}+p{我是內文})+aside+(footer>p{我是頁尾}) -->
+    <div id="wrap">
+        <header>
+            <h1>網站名稱</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">BTN1</a></li>
+                <li><a href="">BTN2</a></li>
+                <li><a href="">BTN3</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <h2>大標題</h2>
+                <p>內文</p>
+            </article>
+        </section>
+        <aside>側邊</aside>
+        <footer>
+            <p>頁尾</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+

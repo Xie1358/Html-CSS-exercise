@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <style>
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: "header header header header"
+                "nav nav nav nav"
+                "main main main aside"
+                "footer footer footer footer";
+            grid-column-gap: 10px;
+        }
+        
+        /* rwd */
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                grid-template-areas: "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+            }
+        }
+
+        header {
+            /* background: lightblue; */
+            grid-area: header;
+        }
+
+        header img {
+            width: 100%;
+            /* 以下2種方法解決多餘gap */
+            /* display: block; */
+            vertical-align: middle;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        nav ul a {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul a:hover {
+            background: #eee;
+        }
+
+        main {
+            /* background: lightcoral; */
+            grid-area: main;
+
+        }
+
+        aside {
+            /* background: cadetblue; */
+            grid-area: aside;
+
+        }
+
+        footer {
+            /* background: chocolate; */
+            grid-area: footer;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="images/banner.jpg" alt="">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Article</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>歡迎來日本東北</h1>
+            <article>
+                仙台市（日語：仙台市／せんだいし）是日本宮城縣縣治，位於宮城縣中部，為政令指定都市，同時也是東北地方最大的城市。該市得名於古稱千代城的古城「仙台城」，於1600年由安土桃山時代名將伊達政宗擴建並改名為同音的仙台。由於全市綠化比例高，而有「杜之都」（森林之都）之譽。
+            </article>
+
+        </main>
+        <aside>
+            這邊是側欄
+
+        </aside>
+        <footer>
+            footer
+        </footer>
+    </div>
+
+</body>
+
+</html>

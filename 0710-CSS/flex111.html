@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            max-width: 960px;
+            /* height: 600px; */
+            background: #eee;
+            margin: 0 auto;
+            /* display: flex; */
+        }
+
+        .flex {
+            background: rgb(204, 73, 165);
+            height: 800px;
+            /* flex只影響一層,inline-flex會把背景縮到內層物件 */
+            /* display: inline-flex; */
+            display: flex;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* flex-flow: 把 flex-direction 跟 flex-wrap 濃縮的寫法 */
+            /* justify-content: 水平對齊位置
+            flex-start|flex-end|center|space-between|space-around | 
+            space-evenly |initial|inherit */
+            justify-content: center;
+            /* flex-wrap: wrap; 知道就好可以不用*//*寬改低會換行*/
+          
+            /* align-items: 單行垂直對齊  stretch|center|flex-start|flex-end|baseline|initial|inherit */
+            /* align-content: 垂直對齊(多行元素用)stretch|center|flex-start|flex-end|space-between|space-around|initial|inherit */
+
+            /* align-items: center; */
+            /* flex-grow:; */
+        }
+
+        .box {
+            width: 320px;
+            /* flex-basis: 基本寬度，約等同 width，但可以複寫 width */
+            height: 120px;
+            /* 沒有高預設是stretch */
+            background: lightblue;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            /* flex-grow:1; 把剩餘空間分給4個box */
+        }
+        .box1{
+            /* 把剩餘空間分給指定box  */
+            flex-grow: 1;
+        }
+  /* flex-grow: flex-basis 長度小於分配的長度時，會依比例延伸，預設是0，設為0則不會彈性變化
+   flex-shrink: 剩餘空間不足時，依數字比例壓縮，預設是1，設為0則不會彈性變化 */
+
+        .box2{
+            /* flex-grow: 4; */
+            /* order: 自訂排序 */
+            /* order: 1; */
+            flex-shrink: 5;
+        }
+        .box3{
+            flex:0 1 240px;
+            /* 合併寫法: flex: flex-grow｜flex-shrink｜flex-basis; */
+            /* 值分別是:grow(預設0) shrink(預設1) basis */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="flex">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box">4</div>
+            <!-- <div class="box">5</div>
+            <div class="box">6</div> -->
+        </div>
+    </div>
+</body>
+
+</html>

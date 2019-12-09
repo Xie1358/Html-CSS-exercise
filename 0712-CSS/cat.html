@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes walk{
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -3150px 0;
+            }
+        }
+        .cat{
+            width: 350px;/*3150/9*/
+            height: 380px;
+            margin: 0 auto; 
+            background: url(images/cat.png);
+            /* background-position: -350px top; */
+            animation: walk .6s infinite steps(9);
+
+        }
+        .cat:hover{
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cat">
+        
+    </div>
+</body>
+</html>

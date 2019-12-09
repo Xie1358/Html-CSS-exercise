@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <style>
+        .maincover-bg {
+            background: url(images/lead_02.png) no-repeat center 114%;
+        }
+
+        .bg-line {
+            background: url(images/lead_01.png) 50% 0;
+            height: 23px;
+        }
+
+        .middle-line {
+            background-color: #ffc800;
+        }
+
+        .middle-line h4 {
+            font-weight: 800;
+            color: #ae0a14;
+        }
+
+        .time-pop {
+            width: 100px;
+            height: 100px;
+            background: #00437e;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 26px;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .time-pop span {
+            display: block;
+            font-size: 18px;
+            padding-top: 20px;
+        }
+
+        .schdele h3 {
+            border-top: 1px solid #ccc;
+            text-align: center;
+            margin-top: -50px;
+            color: #0051bd;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .border-round {
+            border-radius: 50%;
+        }
+
+        .schdele h4 {
+            color: #4595db;
+            border: 2px dotted #999;
+            padding: 10px 20px;
+        }
+
+        .schdele h6 {
+            color: #686868;
+            font-weight: 900;
+        }
+
+        .schdele .time {
+            border-top: 1px solid #7d7d7d;
+            border-bottom: 1px solid #7d7d7d;
+        }
+
+        .schdele h5 {
+            color: #ff8521;
+            font-weight: 700;
+            font-size: 23px;
+        }
+
+        .schdele li {
+            font-size: 17px;
+            color: #666;
+            line-height: 1.8em;
+        }
+
+        .speaker {
+            background: #ddbc61;
+        }
+
+        .speaker img {
+            max-width: 180px;
+        }
+
+        .slider {
+            background: #dadbe9;
+        }
+
+        .map {
+            background: #01277a;
+        }
+
+        .map th,
+        .map td {
+            padding: 15px 10px;
+            border: 1px solid #ccc;
+        }
+
+        .map th {
+            color: #e73e0c;
+        }
+
+        .map tbody tr:nth-child(1) {
+            background: #efefef;
+            color: #fff;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        /* .map tbody tr:nth-child(1) {
+            background: #efefef;
+            color: #fff;
+            font-size: 21px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        } */
+        .map .text-blu {
+            color: #01277a;
+        }
+
+        .map .bg-org {
+            background: #e73e0c;
+        }
+
+        .map .text-org {
+            color: #e73e0c;
+        }
+
+        .map .bg-dy {
+            background: #ff840a;
+        }
+
+        .map a {
+            color: #ff0;
+        }
+
+        .map a.btn-org {
+            display: block;
+            width: 42%;
+            text-align: center;
+            background: #ea5902;
+            /* padding: 6% 28% ; */
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .map a.btn-org:hover {
+            background: #c82333;
+        }
+
+        .map a.btn-blu {
+            display: block;
+            width: 42%;
+            text-align: center;
+            background: #004EA3;
+            /* padding: 6% 28% ; */
+            border-radius: 5px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .map a.btn-blu:hover {
+            background: #003c7d;
+        }
+
+        .map p {
+            font-size: 14px;
+        }
+
+        footer {
+            background: #001e5e;
+            font-size: 12px;
+        }
+
+        @media (max-width:575px) {
+            .sub-btn {
+                position: fixed;
+                bottom: 0;
+                background: #000;
+                width: 100%;
+                margin: 0 -15px;
+            }
+
+            nav img {
+                height: 80%;
+                max-height: 30px;
+
+            }
+
+
+
+            .day img {
+                width: 100%;
+                max-width: 120px;
+                margin-left: 0;
+            }
+
+            .maincover-bg {
+                background-position: 50% 105%;
+                background-size: 200%;
+            }
+
+            .middle-line {
+                padding: 15px;
+            }
+
+            .middle-line h4 {
+                font-size: 18px;
+                line-height: 0.8em;
+                margin-bottom: 0;
+            }
+
+            .middle-line img {
+                width: 10%;
+            }
+
+            .time-pop {
+                width: 100%;
+                height: 62px;
+                font-size: 20px;
+                border-radius: 8px 8px 0 0;
+            }
+
+            .time-pop span {
+                padding-top: 5px;
+            }
+
+            .schdele h3 {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 要RWD要有row -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#01277a ;">
+        <div class="container">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="images/mtlogo.svg" alt="">
+                <img src="images/mtschool.svg" alt="">
+            </a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <!-- ul靠右 套用 ml-auto -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">精彩議程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">課程資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">傳真報名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">預約席位</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FB</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid pt-5 maincover-bg" style="background-color: #ffc800 ;">
+        <div class="row pt-md-3">
+            <div class="col-md-12 bg-line"></div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-2 text-center">
+                        <img class="img-fluid" src="images/lead_03_01.png" alt="">
+                        <img class="img-fluid" src="images/lead_03_02.png" alt="">
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <div class="col-md-5 col-sm-5 d-flex pb-md-5 ml-md-5 day">
+                        
+                        <!-- Day1 教練領導學 -->
+                        <a href=""><img class="img-fluid" src="images/lead_03_03_01.png" alt=""></a>
+                        <a href=""><img class="img-fluid" src="images/lead_03_03_02.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="row py-5"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="middle-line">
+        <div class="container">
+            <div class="row py-md-3">
+                <div class="col-md-4">
+                    <h4>
+                        <img src="images/check.png" alt="">
+                        2大標準職能進修
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        <img src="images/check.png" alt="">
+                        1200名以上主管參訓
+                    </h4>
+                </div>
+                <div class="col-md-4">
+                    <h4>
+                        <img src="images/check.png" alt="">
+                        97%以上滿意推薦
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-3 schdele">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center pb-3">精 彩 議 程</h2>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-6 col-sm-12">
+                <div class="time-pop border-round text-center">
+                    <span>DAY 1</span>
+                    3/13
+                </div>
+                <h3 class="pt-3 pb-1">教練領導學</h3>
+                <h4 class="text-center mx-2">激發部屬潛能 x 引導自主成長</h4>
+                <h6 class="text-center mx-2">陳煥庭／起初國際台灣分公司執行長</h6>
+                <p class="time mt-3 mx-2">09:30 - 17:00</p>
+                <h5 class="mx-2">教練式領導力</h5>
+                <ul class="mx-2">
+                    <li>激發潛能的教練式領導</li>
+                    <li>部屬需要教練式領導的時機</li>
+                    <li>對話的關鍵技巧：讚美與激勵</li>
+                </ul>
+                <h5 class="mx-2">教練式領導四流程</h5>
+                <ul class="mx-2">
+                    <li>了解部屬狀態：融入與抽離的提問技巧</li>
+                    <li>建立信賴關係：同理心訓練＋自我表露技術</li>
+                    <li>釐清問題核心：有效溝通的深度探詢</li>
+                    <li>持續成長動能：引導改變的策略</li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="time-pop border-round text-center">
+                    <span>DAY 1</span>
+                    3/26
+                </div>
+                <h3 class="pt-3 pb-1">團隊經營學</h3>
+                <h4 class="text-center mx-2">團隊成員判讀 x 團隊發展策略</h4>
+                <h6 class="text-center mx-2">林聖修／丞鑫企業管理顧問有限公司創辦人</h6>
+                <p class="time mt-3 mx-2">09:30 - 17:00</p>
+                <h5 class="mx-2">組建核心團隊</h5>
+                <ul class="mx-2">
+                    <li>團隊組建四象限：I, It, Its, We</li>
+                    <li>判讀團隊人才：部屬類型辨識與實戰</li>
+                    <li>盤點領導風格：領導者的自察與突破</li>
+                </ul>
+                <h5 class="mx-2">打造團隊動能</h5>
+                <ul class="mx-2">
+                    <li>解決團隊問題的思考邏輯：判別類型＞擬定策略＞有效溝通＞展開行動</li>
+                    <li>團隊動態管理心法：3個關鍵與6個步驟</li>
+                    <li>團隊定錨與人才策略地圖</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="speaker py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">講 師 介 紹</h2>
+                </div>
+            </div>
+            <div class="row py-3">
+                <!--media讓圖和文字各占一邊 https://www.w3schools.com/bootstrap4/bootstrap_media_objects.asp -->
+                <div class="col-md-6 media">
+                    <img class="mr-2 w-100" src="images/speaker_01.png" alt="">
+                    <div class="media-body">
+                        <h5>陳煥庭</h5>
+                        <h6>起初國際台灣分公司執行長</h6>
+                        <p class="my-4">
+                            國內深層溝通的權威講師，擅長教練式領導與團隊激勵，知識理論和實用技巧同時掌握。一萬場以上授課經歷，合作企業如台積電、星巴克與中國信託等。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 media">
+                    <img class="mr-2 w-100" src="images/speaker_02.png" alt="">
+                    <div class="media-body">
+                        <h5>林聖修</h5>
+                        <h6>丞鑫企業管理顧問有限公司創辦人</h6>
+                        <p class="my-4">
+                            擅長微行為洞察、教練式引導與情商力管理。以教練思維為核心，行為洞察為動力，協助企業改善組織運作，優化團隊能量。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slider py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">學 員 回 饋</h2>
+                </div>
+            </div>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner py-5">
+                    <div class="carousel-item active">
+                        <h3 class="text-center">案例具體搭上演練操作，很受用！</h3>
+                        <p class="text-center">觀光產業/初中階主管/2018.4月教練課</p>
+
+                    </div>
+                    <div class="carousel-item">
+                        <h3 class="text-center">案例具體搭上演練操作，很受用！</h3>
+                        <p class="text-center">觀光產業/初中階主管/2018.4月教練課</p>
+
+                    </div>
+                    <div class="carousel-item">
+                        <h3 class="text-center">案例具體搭上演練操作，很受用！</h3>
+                        <p class="text-center">觀光產業/初中階主管/2018.4月教練課</p>
+
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="qa py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">常 見 問 題</h2>
+                </div>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Q 雙日課一定要一起購買嗎？只上單堂課會影響學習效果嗎？
+
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            A
+                            可以只報名單堂。兩堂課程內容是獨立且完整的，沒有先修或基礎需求，若您目前只對單一主題有興趣，可以只報名單堂，之後再依需要參加即可。商學院精選這兩堂課，推薦您一起參與，完整掌握帶人的技術！
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Q 公司申請報帳有時間限制，付款後大概多久可以收到發票呢？
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            A 您付款完成後的兩週內，我們會將發票寄出，若您需要登打統編資料或拆分多張發票等需求，也請在報名時備註告知，我們會再和您核對細節。
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Q 付款後若臨時有行程更動，可以退費嗎？
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            A
+                            若您無法出席課程，請於課前來電或來信告知，我們會為您保留名額半年，半年內若您對其他課程有興趣可轉移至該堂課；若您需要退款，我們將收取課程的一成費用，並索取銀行轉帳之手續費。請注意，若您於課程結束後告知，恕不另行退費。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center text-white py-2">課 程 資 訊</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-white">
+                    <h5>
+                        <address>
+                            地　點：張榮發國際會議中心 (台北市中正區中山南路11號)
+                        </address>
+                    </h5>
+                    <table class="text-center border">
+                        <thead>
+                            <tr class="bg-light">
+                                <th>一般報名</th>
+                                <th>早鳥優惠</th>
+                                <th>三人以上團報</th>
+                                <th>兩堂套票</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-blu">每人4,500元</td>
+                                <td class="bg-org">每人4,000元</td>
+                                <td class="text-org">每人3,700元</td>
+                                <td class="bg-dy">每人7,400元</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    •3/13教練領導：早鳥至2/27 •3/26團隊經營：早鳥至3/14 <br>
+                                    本課程附午餐與午茶；每堂贈送《經理人月刊》1期（4月號起，將以掛號寄出）
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="py-3">
+                        活動洽詢：02-8773-9808 分機355　楊小姐 <a href="">karen.yang@managertoday.com.tw </a><br>
+                        客服專線：02-8771-6326　 服務時間：週一到週五9:30~12:30；13:30~17:00
+                    </p>
+                    <!--no-gutters 取消間距 -->
+                    <div class="row py-3 no-gutters sub-btn">
+                        <div class="col-md-12 d-flex justify-content-center">
+                            <a href="" class="btn-org py-3">線上報名</a> &nbsp;
+                            <a href="" class="btn-blu py-3">下載報名表</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8629259618397!2d121.51648511546782!3d25.0387254839701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a975c13ae63d%3A0x99f529730969be7f!2z5by15qau55m85Z-66YeR5pyD!5e0!3m2!1szh-TW!2stw!4v1548129547536"
+                        width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white py-3">
+        <p class="mb-0">主辦單位保留活動及課程大綱異動之權利，更新資訊以活動網站內容為主。 <br>
+            © 2018 Business Next Publishing Corp. All Rights Reserved. 106台北市光復南路102號9樓</p>
+    </footer>
+
+</body>
+
+</html>

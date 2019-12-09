@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /* position and flex熟基本可排出所有版  */
+        body {
+            background-color: #ccc;
+            height: 300vh;
+        }
+
+        .card {
+            /* height: 300px; */
+            width: 260px;
+            background: rgb(255, 253, 253);
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #333;
+            /* padding: 20px; */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card figure {
+            /* figure本身有margin 把它清掉 */
+            margin: 0 auto;
+            padding: 0;
+            height: 128px;
+            width: 128px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            margin-left: -64px;
+            /* margin-top: -64px;  */
+        }
+
+        .card figure img {
+            width: 100%;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .banner {
+            height: 100px;
+            background: url(images/light.jpg);
+            background-size: cover;
+        }
+
+        .content {
+            /* background: url(images/light.jpg); */
+            padding: 50px 20px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="banner">
+
+        </div>
+        <figure>
+            <img src="images/dr_strange.jpg" alt="">
+        </figure>
+        <div class="content">
+            <h3>Dr.Strange</h3>
+            <p>Hello, I am Steve Strange.</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

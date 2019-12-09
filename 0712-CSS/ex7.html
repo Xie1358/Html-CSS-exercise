@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.min.css">
+
+    <style>
+
+        @keyframes wave{
+            0%{
+                transform: rotate(0)
+            }
+            50%{
+                transform: rotate(10deg)
+            }
+            100%{
+                transform: rotate(-10deg)
+            }
+        }
+        body{
+            background: #ccc;
+        }
+
+        img{
+            transform-origin: center top;
+        }
+        img:hover{
+            animation: wave .6s;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="box animated bounce infinite ">
+        <img src="images/clothes.png" alt="">
+    </div> -->
+
+            <img src="images/clothes_v1.png" alt="">
+            <img src="images/clothes_v3.png" alt="">
+  
+</body>
+</html>

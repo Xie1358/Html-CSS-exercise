@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: #acc;
+            margin:20px auto;
+            transition: .5s;
+        }
+        .box2{
+            /* height: 100px; */
+            width: 200px; 
+            background-color: #acc;
+            margin: auto;
+        }
+        .border-radius1{ 
+            border-radius: 10px 20px 30px;
+        }
+        .border-radius2{
+            border-radius: 10px 50px;
+        }
+        .border-radius3{
+            border-radius: 20%;
+        }
+        .border-radius4{
+            border-radius: 50%;
+        }
+        .border-radius5{
+            border-radius: 100% 0 0 0;
+        }
+        .border-radius6{
+            border-radius: 20%/50px;
+        }
+        .border-radius7{
+            border-radius: 100% 0;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+        }
+        /* 後代選擇噐 */
+        figure img{ 
+            width:100%;
+        }
+        .shadow{
+            box-shadow: 5px 5px 5px rgb(1, 90, 8);
+        }
+        .shadow2{
+            box-shadow: 5px 5px 5px 10px rgb(1, 90, 8);
+            /* XY位移 模糊 擴散 */
+        }
+        .shadow3:hover{
+            box-shadow: 5px 5px 5px inset rgb(1, 90, 8);
+            /* 內陰影 */
+        }
+        .shadow3:active{ 
+            box-shadow: 5px 5px 5px inset rgb(93, 1, 116);
+        }
+        .shadow4{
+            box-shadow: 10px 10px 5px  rgb(1, 90, 8), -10px -10px 5px red;
+        }
+        .shadow5{
+            box-shadow: 0px 0px 10px inset orange
+            ,0px 0px 40px inset rgb(255, 0, 0);
+            border-radius: 50%;
+            background:yellow;
+        }
+        .shadow6:hover{
+            box-shadow: -100px 0px 0px rgb(1, 90, 8)
+            ,100px 0 0 red ;
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="box border-radius1">1</div>
+    <div class="box border-radius2">2</div>
+    <div class="box border-radius3 box2">3</div>
+    <div class="box border-radius4">4</div>
+    <div class="box border-radius5">5</div>
+    <div class="box border-radius6">6</div>
+    <div class="box border-radius7">7</div>
+    <hr>
+    <figure class="border-radius4 box overflow-hidden">
+        <img src="images/dr_strange.jpg" alt="">
+    </figure>
+
+    <div class="box shadow">8</div>
+    <div class="box shadow2">&nbsp&nbsp9</div>
+    <div class="box shadow3">10</div>
+    <div class="box shadow4">11</div>
+    <div class="box shadow5">12</div>
+    <div class="box shadow6">13</div>
+
+    
+
+
+
+</body>
+</html>

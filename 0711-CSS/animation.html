@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* @keyframes changeColor {
+            from {
+                background: palevioletred;
+            }
+
+            to {
+                background: lightblue;
+            }
+        } */
+        @keyframes changeColor{
+            0%{
+                background: palevioletred; 
+            }
+            50%{
+                background: lightblue;
+                width: 300px;
+                border-radius: 10px;
+
+            }
+            100%{
+                background: red;
+            }
+        }
+        @keyframes changeWidth{
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 300px;
+            }
+            100%{
+                width: 200px;
+            }
+        }
+
+
+        .box {
+            margin:10px;
+            width: 200px;
+            height: 200px;
+            background: palevioletred;
+            /* animation-name: changeColor;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: 3;
+            animation-direction: alternate; 动画1->2 , 2->1
+            animation-fill-mode: both;
+            animation-timing-function: cubic-bezier(.2,-0.57,.89,1.61);
+            animation-timing-function: steps(4); */
+            /* animation-play-state: paused; */
+            /* animation: changeColor 2s 2 alternate both; */
+            animation: changeColor 2s 2 alternate both, changeWidth 1s infinite alternate;
+            /* 可用參數
+animation
+animation-delay: 動畫延遲
+animation-direction: 動畫播放方向
+    normal|reverse|alternate|alternate-reverse|initial|inherit
+
+animation-duration: 動畫持續時間
+animation-fill-mode: 動畫停止時顯示的畫面 
+   (none|forwards|backwards|both|initial|inherit
+    forwards: 停在最後的狀態
+    backwards: 停在最初的狀態
+    both: 視 animation-direction 決定狀態)
+
+animation-iteration-count: 動畫播放次數
+animation-name: 選擇動畫
+animation-play-state: 動畫狀態
+animation-timing-function: 動畫播放 */
+
+        }
+        /* .box:hover{
+            animation-play-state: paused;
+        }
+        .step_start{
+            animation-timing-function: steps(4, start);
+        }
+        .step_end{
+            animation-timing-function: steps(4, end);
+        } */
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box step_end">
+
+        </div>
+    
+</body>
+
+</html>

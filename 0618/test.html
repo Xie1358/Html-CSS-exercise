@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{
+            /* 不寫高 給header,main,footer 的高撐開 */
+            width: 600px; 
+            background: rgb(221, 117, 117);
+            margin: auto;
+        }
+        header{
+            height: 100px;            
+            background: rgb(96, 246, 189);
+            text-align: center;
+        }
+        .main{
+            height: 500px;
+            background: rgb(39, 165, 81);         
+        }
+        .footer{
+            height: 100px;
+            background: rgb(135, 45, 153);
+        }
+
+        a:link{
+            /* default color 因為cookie有紀錄曾去過 所以會顯示pink */
+            /* 換成沒去過的網址就會顯示green */
+            color: green;
+        }
+        a:visited{
+            /* visited color */
+            color: pink;
+        }
+        a:hover{
+            color:red;      
+        }
+        a:active{
+            color:yellow;
+        }
+
+        ul{
+            list-style-type: none;
+            /* list-style-type: square ; */
+            /* (circle 空心圓)(decimal 阿拉伯數字)
+               (decimal-leading-zero以0開頭十進位數字)
+               (lower[upper]-alpha小[大]寫英文字母)
+               (lower-roman小寫羅馬字母)  */
+            /* list-style-position: inside ;清單前使用符號的位置 */
+            margin-left: 100px ;
+        }
+        li {
+            font-size: 20px ;
+            line-height: 80px;
+            list-style-image: url("images/ATT00012.gif") ;
+        } 
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1>h</h1>
+        </header>
+        <div class="main">
+                <!-- ul>li*3>a{item$} -->
+            <ul >
+                <li><a href="http://www.cypress.com/part/cy8c4127axi-s453">item1</a></li>
+                <li><a href="https://tw.yahoo.com/">item2<br>dog</a></li>
+                <li><a href="https://tw.yahoo.com/">item3</a></li>
+                <li><a href="">item4</a></li>
+            </ul>
+            
+                 <!-- 被擠到footer -->
+                <a href="">item1</a>
+                <a href="">item2</a>
+                <a href="">item3</a>
+            
+        </div>
+        <div class="footer">f</div>
+    </div>
+</body>
+</html>

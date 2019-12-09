@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map{
+            height: 500px;
+            width: 800px;
+            background: url(images/25.png) no-repeat center center
+            ,url(images/7.png) no-repeat left top,url(images/map.png);
+            background-size: 100px 100px,80px 80px,auto; 
+            /* 第一張圖size 100*100, 第二80*80, 第三auto */
+            /* 第一張圖size 100*auto, 第二auto*80, 可等比例縮放 常用*/
+            transition: .5s;
+        }
+        .map:hover{
+            background: url(images/25.png) no-repeat right top
+            ,url(images/7.png) no-repeat left bottom,url(images/map.png);
+            /* background-size: 100px 100px,80px 80px,auto;  */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="map"></div>
+</body>
+</html>

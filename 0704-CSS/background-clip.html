@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 250px;
+            width: 250px;
+            margin: 20px;
+            padding: 20px;
+            border: 6px dashed #aaa;
+            background: url(images/check.jpg);
+        }
+
+        .border {
+            /* padding以外的背景減掉 */
+            background-clip: border-box;
+        }
+
+        .padding {
+            /* 預設 padding以外的背景減掉 */
+            background-clip: padding-box;
+        }
+
+        .content {
+            /* content以外的背景減掉 */
+            background-clip: content-box;
+        }
+        h1{
+            padding: 20px;
+            background: url(images/map.png);
+            /* 網頁還沒標準化之前會加前贅字-webkit- */
+            /* 下面拿掉註解 */
+            -webkit-background-clip: text;
+            /* 把文字顏色拿掉 */
+            color: transparent;
+        }
+
+        #example1 {
+            border: 10px dotted black;
+            padding: 15px;
+            background: lightblue;
+            background-clip: border-box;
+        }
+
+        #example2 {
+            border: 10px dotted black;
+            padding: 15px;
+            background: lightblue;
+            background-clip: padding-box;
+        }
+
+        #example3 {
+            border: 10px dotted black;
+            padding: 50px;
+            background: lightblue;
+            background-clip: content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box border"></div>
+    <div class="box padding"></div>
+    <div class="box content"></div>
+    <h1>Helloo world!</h1>
+
+    <h1>The background-clip Property</h1>
+    <p>The background-clip property defines how far the background should extend within an element.</p>
+
+    <p>background-clip: border-box (this is default):</p>
+    <div id="example1">
+        <p>The background extends behind the border.</p>
+    </div>
+
+    <p>background-clip: padding-box:</p>
+    <div id="example2">
+        <p>The background extends to the inside edge of the border.</p>
+    </div>
+
+    <p>background-clip: content-box:</p>
+    <div id="example3">
+        <p>The background extends to the edge of the content box.</p>
+    </div>
+
+    <p><strong>Note:</strong> The background-clip property is not supported in Internet Explorer 8 and earlier versions.
+    </p>
+</body>
+
+</html>

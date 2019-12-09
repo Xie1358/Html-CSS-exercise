@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            transition: .5s;
+            width: 200px;
+            margin: 20px;
+        }
+
+        .blur:hover {
+            filter: blur(10px);
+        }
+
+        .brightness:hover {
+            filter: brightness(150%);
+        }
+
+        .contrast:hover {
+            filter: contrast(50%);
+        }
+
+        .box-shadow:hover {
+            box-shadow: 0 0 10px #000;
+        }
+
+        .drop-shadow:hover {
+            filter: drop-shadow(0 0 10px #000);
+        }
+        .filter:hover{
+            filter: hue-rotate(60deg) contrast(150%);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="blur" src="images/dr_strange.jpg" alt="">
+    <img class="brightness" src="images/dr_strange.jpg" alt="">
+    <img class="contrast" src="images/dr_strange.jpg" alt="">
+    <!--"drop-shadow"類似box-shadow 但可加在不規則形狀上 -->
+    <img class="drop-shadow" src="images/dr_strange.jpg" alt="">
+    <img class="box-shadow" src="images/dr_strange.jpg" alt="">
+    <img class="drop-shadow" src="images/picture.svg" alt="">
+    <img class="filter" src="images/dr_strange.jpg" alt="">
+
+</body>
+
+</html>

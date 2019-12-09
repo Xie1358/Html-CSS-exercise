@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border:6px dashed #aaa;
+            background: url(images/check.jpg) no-repeat;
+        }
+        .border{
+            /* 從左上角開始 壓住border開始延伸 */
+            background-origin: border-box;
+        }
+        .padding{
+            /* 預設 壓住padding開始延伸*/
+            background-origin: padding-box;
+        }
+        .content{
+            /* 從padding開始 壓住content開始延伸*/
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box border"></div>
+    <div class="box padding">8888888888888888</div>
+    <div class="box content">8888888888888888</div>
+</body>
+</html>

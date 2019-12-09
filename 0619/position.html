@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: rgb(127, 219, 204) url(images/ATT00012.gif);
+        
+        }
+        div{
+            height: 100px;
+            width: 100px;
+        }
+        .aa{
+            background: rgb(233, 206, 206);
+            position: absolute;  /* 絕對定位不管爸爸(dd)在哪 永遠離top50px left30px */
+            top: 50px;
+            left: 30px;
+            z-index: 1;
+        }
+        .bb{
+            background: rgba(230, 139, 139, 0.637);
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            z-index: 2;
+        }
+        .cc{
+            background: rgba(129, 129, 128, 0.719);
+            width: 100%; 
+            top:0px;
+            position: fixed;
+            z-index: 8;
+        }
+        .dd{
+            background: rgb(84, 154, 211);
+            position: relative; /* 相對定位才能管住兒子(aa)以爸爸(dd)的位置來離top50px left30px */
+            width: 300px;
+            height: 3000px;
+            margin: auto;
+        }
+        .ee{
+            background: rgba(213, 120, 236, 0.685);
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            border-radius: 20%;
+        }
+    </style>
+</head>
+<body> 
+    <div class="dd">    
+        <div class="aa"></div>
+        <div class="bb"></div>
+    </div>   
+    <div class="cc"></div>
+    <div class="ee"></div>
+
+</body>
+</html>

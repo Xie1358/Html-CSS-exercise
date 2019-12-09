@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>calc</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #ddd;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            /*不會有下拉bar*/
+            height: calc(100vh - 58px);/*讓footer在最下面*/
+            /* vmin的值是当前vw和vh中较小的值 */
+        }
+
+        .box {
+            width: calc(25% - 60px);/*margin左右各10+padding左右各20=60*/
+            margin: 0 10px 10px;
+            height: 200px;
+            padding: 20px;
+            background: #fff;
+            float: left;
+            /* box-sizing: border-box; */
+        }
+
+        .clear {
+            clear: both;
+        } 
+
+        footer {
+            background: #333;
+            color: #eee;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            1
+        </div>
+        <div class="box">
+            2
+        </div>
+        <div class="box">
+            3
+        </div>
+        <div class="box">
+            4
+        </div>
+        <div class="box">
+            5
+        </div>
+
+    </div>
+
+    <div class="clear"></div>
+    <footer>
+        i'm footer
+    </footer>
+</body>
+
+</html>

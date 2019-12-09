@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            max-width: 940px;
+            background: lightblue;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+        }
+        .box{
+            float: left;
+            background: #fff;
+            margin: 10px;
+            width: 250px;
+            /*防止破版 以下2種常用方法*/
+            min-height: 80px;
+            /* height: 80px;
+            overflow: hidden; */
+        }
+        /* .clear{
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       
+        <div class="box">
+            層疊樣式表（英語：Cascading Style Sheets，縮寫：CSS；又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表）是一種用來為結構化文件（如HTML文件或XML應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C定義和維護。目前最新版本是CSS2.1，為W3C的推薦標準。CSS3現在已被大部分現代瀏覽器支援，而下一版的CSS4仍在開發中。
+        </div>
+        <div class="box">
+                123
+            </div>
+            <div class="box">
+                    123
+                </div>
+                <!-- <div class="clear"></div> -->
+    </div>
+</body>
+</html>

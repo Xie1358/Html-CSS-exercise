@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet"> -->
+
+    <style>
+        body{
+            background: url(images/earth.jpg) no-repeat;
+        }
+        .wrapper{
+            max-width: 960px;
+            margin: 20px auto;
+            /* font-family: 'Muli', sans-serif; */
+            perspective: 500px;/**/
+        }
+
+        ul{
+            margin:40px 0 0; 
+            padding: 0;
+            width: 160px;
+            transform: rotateY(45deg);
+            transform-style:preserve-3d;/**/
+            list-style: none;
+
+        }
+        ul li{
+            margin: 0 0 10px;
+            font-size: 25px;
+            transition: .5s;
+            position: relative;
+
+        }
+        ul li:hover{
+            transform: translateZ(50px);
+        }
+        ul li::after{
+            content: "";
+            display: block;
+            position: absolute;
+            left:6px;
+            top:6px;
+            width:0px;
+            bottom: 6px;
+            background: #fff;
+            transition: .2s .3s;
+        }
+        ul li:hover::after{
+            width:4px;
+        }
+
+        ul li a{
+            display: block;
+             color:rgb(15, 139, 216);
+            text-decoration: none;
+            border: 2px solid rgb(15, 139, 216);
+            padding: 10px;
+            transition: .5s;     
+        }
+        ul li a:hover{
+            background: rgb(15, 139, 216);
+            color:#fff;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+
+</html>

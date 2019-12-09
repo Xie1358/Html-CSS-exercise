@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background: #ccc;
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .card {
+            float: left;
+            background: #fff;
+            width: 25%;
+            padding: 10px;
+            margin: 0 1%;
+        }
+
+        .card h3 {
+            /* 3個都要加才有效 */
+            text-overflow: ellipsis;
+            /* 強制不換行 切板會遇到*/
+            white-space: nowrap;
+            overflow: hidden;
+        } 
+        /* 下面4行知道就好 平常要用只要限制高度和overflow: hidden就好*/
+        .card p{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            /* line-clamp顯示行數 */
+            -webkit-line-clamp: 4;
+        }
+        /* .text-truncate {} */
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <!-- title是hover可看到內容 -->
+            <h3 title="殺警犯押看守所狂喊餓！嗑光肉燥便當　鬧整夜改住單人房">殺警犯押看守所狂喊餓！嗑光肉燥便當　鬧整夜改住單人房</h3>
+            <p>眼見這名飼主不疑有他、將西施從客廳抱出門，男子一把搶過他手中的狗，抓住狗狗的後頸一路跑上12樓，接著打開走廊上的窗戶，將狗狗朝柏油路的方向丟，而不是草地的方向。他下樓途中遇到上來找狗的西施飼主，還對對方說，「去1樓找吧。」
+
+                    原文網址: 影／2歲女兒被咬！　失控爸怒抓西施犬「12樓丟下」後狠嗆飼主：去1樓找吧 | ETtoday國際 | ETtoday新聞雲 
+                   </p>
+        </div>
+        <div class="card">
+            <h3 title="25歲台鐵警殉職…日本也有「隨機殺人1死2傷」　設備+訓練超完善">25歲台鐵警殉職…日本也有「隨機殺人1死2傷」　設備+訓練超完善</h3>
+        </div>
+        <div class="card">
+            <h3>「回家吧綠氣球」掛9天自爆！長榮：把它取下來</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>

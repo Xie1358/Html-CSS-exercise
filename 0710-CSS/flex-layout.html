@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Layout</title>
+    <link rel="stylesheet" href="normalize.css">
+    
+    <style>
+        /*grid system's col(沒數字)有flex-grow:1  */
+        body{
+            background: #ddd;
+        }
+        aside{
+            flex-shrink: 0;
+            /* 防圖被壓縮flex-shrink: 剩餘空間不足時，依數字比例壓縮，預設是1，
+            設為0則不會彈性變化*/
+        }
+        a, a:link{
+            color:#3c5a9c;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .wrapper{
+            margin: 0 auto;
+            max-width: 960px;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .card{
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #fff;
+            padding: 10px;
+        }
+        .object_cover{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo{
+            height: 48px;
+        }
+        .main_header{
+            background: #fff;
+            padding: 10px 0;
+        }
+        .main_header .d-flex{
+            justify-content: space-between;
+        }
+        .main_menu{
+            background: #3c5a9c;
+            margin-bottom:10px;
+        }
+        .main_menu ul{
+            padding: 0;
+        }
+        .main_menu li{
+            list-style: none;
+            position: relative;
+            /* flex-grow:1; */
+        }
+        .main_menu a{
+            color:#fff;
+            padding:12px 16px;
+             /* display: inline-block容易有bug 能不用盡量不用  */
+            display: block;/*撐大*/
+        }
+        .main_menu a:hover, .main_menu li.active a{
+            text-decoration: none;
+            background: #355089;
+        }
+        .submenu{
+            position: absolute;/*不占空間*/
+            background: #3c5a9c;
+             /* top:0; */
+            /* display: none; 和display: block;無法用漸變*/
+            transition: .5s;
+            opacity: 0;
+            max-height: 0;/* 下拉選單用max-height 在2個數值間可以漸變*/
+            overflow: hidden;/*讓height的高度限制看得見的內容*/
+            width: 100%;
+        }
+        .main_menu li:hover .submenu{
+            /* display: block; */
+            opacity: 1;
+             /* max-height 限制選單不會多出空白 */
+            max-height:150px;
+        }
+        /* media裡的內容盡量和原本的一樣 避免權重問題 */
+        @media screen and (max-width:576px){
+            .main_menu li{
+                /* flex-grow: 1; */
+                text-align: center;
+                /* flex-basis: 0; */
+                /* 讓user_menu一樣寬 */
+                flex: 1 1 0;
+                /* flex: flex-grow｜flex-shrink｜flex-basis; */
+            }
+        }
+        
+        .profile_picture{
+            width: 180px;
+            height: 180px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 0;
+        }
+        .user_menu{
+            padding:0;
+        }
+        .user_menu li{
+            list-style: none;
+        }
+        /* list-unstyled  bootstraps*/
+        .user_menu li a{
+            display: block;
+            padding: 10px 20px;
+            border-left: 4px solid transparent;
+            color:#333;
+        }
+        .user_menu li a:hover, .user_menu li.active a{
+            text-decoration: none;
+            background: #fff;
+            border-left: 4px solid #4267b2;
+        }
+        .user_menu li.active a{
+            font-weight: bold;
+        }
+        .content{
+            flex-grow: 1;
+            margin: 0 10px;
+        }
+        .content article{
+            min-height: 400px;
+        }
+        .r_aside{
+            width:180px;
+            align-self: flex-end;
+        }
+        .r_aside img, article img{
+            max-width: 100%;/*讓圖片不破版*/
+        }
+        @media screen and (max-width:768px){
+          .main_content{
+              flex-direction: column;
+              /* flex-wrap: wrap; */
+          }
+          .main_content{
+              width: 100%;
+          }
+          .profile_picture{
+            margin: 0 auto;
+          }
+          .user_menu{
+              display: flex;
+          }
+          .user_menu li{
+              flex: 1 0 0 ;
+              text-align: center;
+          }
+          .user_menu li a{
+                border-left:none;
+                border-top: 4px solid transparent;
+            }
+            .user_menu li a:hover, .user_menu li.active a{
+                border-left:none;
+                border-top: 4px solid #4267b2;
+            }
+            .r_aside img{
+                display: none;
+            }
+        }
+        .main_footer{
+            padding: 20px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="main_header">
+        <section class="wrapper d-flex">
+            <img class="logo" src="images/facebook.png" alt="">
+            <div>
+                <a href="">Log in</a> | <a href="">Sign up</a>
+            </div>
+        </section>
+    </header>
+    <!-- nav>ul>li*5>a{home} -->
+    <!-- Navigation 導覽列-->
+    <nav class="main_menu">
+        <ul class="wrapper d-flex">
+            <li class="active"><a href="">Home</a></li>
+            <li><a href="">Product</a>
+                <ul class="submenu">
+                    <li><a href="">Shoes</a></li>
+                    <li><a href="">Clothes</a></li>
+                    <li><a href="">Skirts</a></li>
+                </ul>
+            </li>
+            <li><a href="">Story</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+    
+    <section class="wrapper d-flex main_content">
+        <aside>
+            <!-- 當系統圖可以替換要限制UI所以用figure -->
+            <figure class="profile_picture">
+                <img class="object_cover" src="images/logo.jpg" alt="">
+            </figure>
+            <nav>
+                <ul class="user_menu">
+                    <li class="active"><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Album</a></li>
+                    <li><a href="">Films</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content ">
+            <div class="card">
+                <h1>Facebook</h1>
+                <div>
+                    <time>2019/7/10 15:00</time>
+                </div>
+                <article>
+                    <p>this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.this is an artile.</p>
+                </article>
+            </div>
+        </main>
+        <aside class="r_aside">
+            <!-- 單純圖所以不用figure -->
+            <img src="images/jk.png" alt="">
+        </aside>
+    </section>
+    <footer class="main_footer">
+            copyright by facebook
+    </footer>
+</body>
+</html>

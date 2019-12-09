@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Border Image</title>
+    <style>
+        .box{
+            height: 200px;
+            border:20px solid transparent; 
+            /*數字代表在圖片何處切割 圖大小是20*20 所以值設20*/
+            border-image: url(images/border-image.png) 20 round;
+            /* repeat 為重複, round 為圖形重複, stretch 為圖形延展 */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

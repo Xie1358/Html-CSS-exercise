@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .pic_wrap{
+            width: 600px;
+            height: 500px;
+            margin: 0 auto;
+            position: relative;
+            background: #000;
+        }
+        .pic_title{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            font-size: 25px;
+            /* z-index用在position不是預設static 有重疊問題時 */
+            /* 有absolute,text-align: center 需要width100% */
+            text-align: center;
+            width: 100%;
+            padding: 10px 0;
+            background: rgba(0,0,0,.8);
+            z-index: 1;
+            opacity: .5;
+            transition: .5s; 
+        }
+        .picture{
+            position: absolute;
+            width: 600px;
+            height: 500px;
+            background: url(images/slide1.jpeg);
+            background-size: cover;
+            transition: .5s;
+        }
+        .pic_wrap:hover .pic_title{
+            opacity: 1;
+        }
+        .pic_wrap:hover .picture{
+            opacity:.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic_wrap">
+        <div class="pic_title">
+            高雄總圖
+        </div>
+        <!--"picture"會蓋掉"pic_title" 有順序問題可用z-index  -->
+        <div class="picture">
+            
+        </div>
+    </div>
+</body>
+</html>

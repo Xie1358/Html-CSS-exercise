@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: lightblue;
+            transition: .5s;
+            margin: 20px;
+            float: left;
+        }
+
+        .boxwrap {  /*避免感應區域跟著變行跑掉一直抖*/
+            width: 200px;
+            height: 200px;
+            border: 2px solid #aaa;
+            float: left;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .boxwrap .box {
+            margin: 0;
+        }
+
+        .scale2:hover .box {
+            transform: scale(0);
+        }
+
+        .slide .box {
+            transform: translateY(-200px);
+        }
+
+        .slide:hover .box {
+            transform: translateY(0);
+        }
+
+        .translate:hover {
+            transform: translate(20px, 30px);
+        }
+
+        .rotate:hover  {
+            transform: rotate(720deg);
+        }
+
+        .scale:hover {
+            transform: scale(0.2);
+        }
+        .rotate{
+            transform-origin: left top;
+        }
+
+        .skew:hover {
+            transform: skewX(10deg);
+        }
+
+        .multi:hover .box {
+            transform: rotate(30deg) scale(.5);
+        }
+        .matrix:hover .box{
+            transform: matrix(0.5, 0, 0, 1, 20, 0);
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box translate">box translate</div>
+    <div class="box rotate">box rotate</div>
+    <div class="box scale">box scale</div>
+    <div class="boxwrap scale2">
+        <div class="box">boxwrap scale2</div>
+    </div>
+    <div class="boxwrap slide">
+        <div class="box">boxwrap slide</div>
+    </div>
+    <div class="box skew">box skew</div>
+    <div class="boxwrap multi">
+        <div class="box">boxwrap multi</div>
+    </div>
+    <div class="boxwrap matrix">
+        <div class="box">boxwrap matrix</div>
+    </div>
+
+
+</body>
+
+</html>

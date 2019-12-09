@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map {
+            height:500px;
+            max-width: 500px;
+            background: url(images/map.png) center center no-repeat; 
+            transition: .5s;
+            margin: 20px auto;
+            border: 1px solid #aaa;
+        }
+
+        /* 1vw=1/100的畫面 */
+        /* .map {
+            height:50vw;
+            max-width: 50vw;
+            background: url(images/map.png) center center no-repeat; 
+            transition: .5s;
+            margin: 20px auto;
+            border: 1px solid #aaa;
+        } */
+
+        .contain {
+            /* 完整看到一整張圖 */
+            background-size: contain;
+        } 
+
+        .cover {
+            /* 填滿框框 */
+            background-size: cover; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="map"></div>
+    <div class="map contain"></div>
+    <div class="map cover"></div>
+
+</body>
+
+</html>

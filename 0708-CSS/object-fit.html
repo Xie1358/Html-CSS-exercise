@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object-fit</title>
+    <style>
+        .box {
+            max-width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 2px solid red;
+            margin: 10px;
+        }
+        /* background-size 是針對背景的方式 Object-fit是設定需要的大小 */
+        .box img {
+            /* 圖寬和高100%顯示在box裡 */
+            height: 100%;
+            width: 100%;
+            transition: .5s;
+        }
+        .box:hover img{
+            transform: scale(1.1);
+        }
+        /* .box img:hover {
+            transform: scale(1.1);
+        } */
+        .fill {
+            object-fit: fill;
+        }
+
+        .contain {
+            object-fit: contain;
+        }
+        .cover{
+            object-fit: cover;
+        }
+        .none{
+            object-fit: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img class="fill" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="contain" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="cover" src="images/dr_strange.jpg" alt="">
+    </div>
+    <div class="box">
+        <img class="none" src="images/dr_strange.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

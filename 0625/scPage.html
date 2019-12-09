@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        header{
+            width: 100%;
+            background: rgba(0, 0, 0, 0.582);
+            position: fixed;
+            top: 0;
+            height: 80px;
+        }
+        nav{
+            width: 100%;
+            max-width: 1480px;
+            margin: auto;
+        }
+        nav li{
+            display: inline-block;
+            margin-right: 20px;
+            /* padding-left: 20px; */
+            margin-left: 20px;
+        }
+        nav a{
+            color: #fff;  /*text color*/
+            text-decoration: none;
+            background: #acc;
+            padding: 10px 20px;
+            line-height: 80px;/*對應header的height80 垂直置中*/
+            font-size: 20px;
+        }
+        .area{
+            width: 100%; /*瀏覽器<1480 100%顯示, >1480只顯示1480 */
+            max-width: 1480px;
+            margin: 0 auto;
+            height: 1000px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px #aaa;/*0 0 水平 垂直*/
+        }
+        #area1{
+            background: url(images/puckered.png) no-repeat 0 0 fixed; /*0(x) 0(y) fixed(attachment)視差捲動 */
+        }
+        #area2{
+            background: url(images/slide2.jpg) no-repeat 50% 50% fixed;
+        }
+        #area3{
+            background: url(images/slide3.jpg) no-repeat 0 0 fixed;
+        }
+        #area4{
+            background: url(images/slide4.jpg) no-repeat 50% 0 fixed;
+        }
+        a.up{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgb(84, 179, 29);
+            color: #fff;
+            text-decoration: none;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 20px;
+        }
+        section{
+            padding: 100px 20px 20px 20px;
+        }
+        #area2 li{
+            float: left;
+        }
+    </style>
+
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- header>nav>ul>li*4>a{Page$$} -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#area1">Page01</a></li>
+                <li><a href="#area2">Page02</a></li>
+                <li><a href="#area3">Page03</a></li>
+                <li><a href="#area4">Page04</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- section#area1.area+section#area2.area+section#area3.area+section#area4.area -->
+    <section id="area1" class="area"></section>
+    <section id="area2" class="area">
+        <ul>
+            <li><a href="images/examples/image-1.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-1.jpg" alt=""></a></li>
+            <li><a href="images/examples/image-2.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-2.jpg" alt=""></a></li>
+            <li><a href="images/examples/image-3.jpg" rel="lightbox[roadtrip]"><img src="images/examples/thumb-3.jpg" alt=""></a></li>
+        </ul>
+    </section>
+    <section id="area3" class="area"></section>
+    <section id="area4" class="area">
+        <footer>
+            <div><a href="#area1" class="up">TOP</a></div>
+        </footer>
+    </section>
+    <!-- 滑動效果 以下三個script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

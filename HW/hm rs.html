@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+ 
+        .style1 {
+            color: rgb(180, 180, 180);
+            margin-left: 400px;
+            line-height: 65px;
+        }
+
+        /* .top {
+            background-color: #01277A;
+            min-height: 65.0156px;
+            max-width: 100%;
+            position: fixed;
+            z-index: 1;
+        } */
+        .bg1 {
+            background-color: #ffc800;
+            height: 1138.48px;
+            max-width: 100%;
+            position: relative;
+            /* margin: 0 auto; */
+            /* z-index: -999; */
+        }
+        .bg1 .po1 {
+            position: absolute;
+            bottom: 100px;
+            /* background-size: auto; */
+            /* top: calc(65% - 174px); */
+            /* left: calc(50% - 950px); */
+        }
+        .bg1 .po2 {
+            position: absolute;
+            width: 100%;
+            top: 55px;
+        }
+
+        .bg1 .po3 {
+            height: 242px;
+            width: 970px;
+            /* position: absolute; */
+            /* margin-top: 100px; */
+            margin: 100px auto;
+            background: url(images/lead_03_01.png) center center no-repeat;
+            background-size: contain;
+            /* z-index: 1; */
+            /* left: calc(50% - 485px); */
+            /* background-size：contain; */
+        }
+
+        .bg1 .po4 {
+            /* height: 256px;
+            width: 800px;
+            margin:100px auto ;
+            background: url(images/lead_03_02.png) center center no-repeat;
+            background-size: contain; */
+            
+            position: absolute;
+            margin-top: 350px;
+            left: calc(50% - 400px);
+        }
+
+        .bg1 .po5 {
+            position: absolute;
+            top: calc(65% - 144px);
+            left: calc(50% - 490px);
+            width:200px;
+        }
+
+        .bg1 .po6 {
+            position: absolute;
+            top: calc(65% - 144px);
+            left: calc(50% - 290px);
+            width:200px;
+        }
+        .bg1 .s1 {
+            color: rgb(153, 20, 20);
+            position: absolute;
+            bottom: 30px;
+            font-weight: bold;
+            font-size: 25px;
+            left: calc(50% - 550px);
+        }
+
+        .bg2 {
+            color: black;
+            height: 50px;
+            /*精 彩 議 程*/
+            text-align: center;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .bg3 {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* img {
+            height: auto;
+            max-width: 100%;
+        } */
+        .c1 {
+            background-color: #00437E;
+            /*day circle1*/
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .c2 {
+            background-color: #FF840A;
+            /*day circle2*/
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .padding1 {
+            color: rgb(13, 89, 156);
+            font-size: 25px;
+            font-weight: bold;
+            left: calc(50% - 50px);
+        }
+
+        .padding2 {
+            color: rgb(74, 166, 247);
+            text-align: center;
+            margin-right: 320px;
+            font-size: 25px;
+            font-weight: bold;
+            border-style: dotted;
+            border-width: 2px;
+            border-color: gray;
+        }
+
+        .padding3 {
+            margin-left: 120px;
+            /* left: calc(70% - 1px); */
+            text-align: middle;
+            line-height: 40px;
+        }
+
+        .padding4 {
+            color: rgb(74, 166, 247);
+            text-align: center;
+            margin-right: 320px;
+            font-size: 25px;
+            font-weight: bold;
+            border-style: dotted;
+            border-width: 2px;
+            border-color: gray;
+        }
+
+        .mid {
+            left: calc(20% - 100px);
+        }
+
+        .sec4 {
+            height: 55px;
+            width: 100%;
+            background-color: #DDBC61;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        .sec5 {
+            height: 55px;
+            width: 100%;
+            background-color: #01277A;
+        }
+
+        .bgc {
+            background-color: #01277A;
+        }
+
+        table {
+            width: 400px;
+            border: 1px solid rgb(245, 244, 244);
+            border-collapse: collapse;
+            /* 欄位縫去掉 */
+        }
+        td,
+        th {
+            border: 1px solid rgb(200, 200, 200);
+            padding: 4px;
+            text-align: center;
+            /* vertical-align: bottom; */
+        }
+        thead tr:nth-child(1) {
+            background-color: white
+        }
+
+        tbody tr:nth-child(1) {
+            background-color: rgb(231, 230, 230)
+        }
+
+        tbody tr:nth-child(2) {
+            background-color: rgb(231, 230, 230)
+        }
+    </style>
+</head>
+
+<body>
+    
+    <section class="section1">
+        <nav class="navbar navbar-expand-sm navbar-dark bgc fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/mtlogo.svg" class="">
+                    <img src="images/mtschool.svg" class="">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">精彩議程</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">課程資訊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">傳真報名</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">預約席位</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FB</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="section2">
+        <div class="bg1 ">
+            <!-- <div class="container"> -->
+                <div class="row">
+            <img src="images/download.png" class="po1">
+            <img src="images/lead_01.png" class="po2">
+            <!-- <img src="images/lead_03_01.png" class="po3"> -->
+            <div class="po3"></div>
+            <img src="images/lead_03_02.png" class="po4">
+            <!-- <div class="po4"></div> -->
+            <img src="images/lead_03_03_01.png" class="po5">
+            <img src="images/lead_03_03_02.png" class="po6">
+            <span1 class="s1"><img src="images/check.png"> 2大標準職能進修
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="images/check.png">1200名以上主管參訓
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="images/check.png">
+                97%以上滿意推薦
+            </span1>
+            <!-- <span1 class="s1" style="margin: 0 auto;">
+                <img src="images/check.png"> 2大標準職能進修
+                <img src="images/check.png">1200名以上主管參訓
+                <img src="images/check.png">97%以上滿意推薦
+            </span1> -->
+            </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <section class="section3">
+        <!-- section 3 -->
+
+        <div class="row">
+            <h1 class="bg2">精 彩 議 程</h1>
+            <div class="col-md-6 col-sm-12 mid">
+                <div class="c1" style="color: white; font-size: 20px;"><br>DAY1<br>
+                    <!--DAY1 3/13-->
+                    <div style="width:520%;height:1px;background:#E0E0E0;margin-left: 100px;">
+                    </div>3/13
+                </div>
+                <!--左邊-->
+                <spapn class="padding1">教練領導學</spapn>
+                <div class="padding2">激發部屬潛能 x 引導自主成長</div>
+                <p class="padding3">陳煥庭／起初國際台灣分公司執行長</p>
+                <!-- line -->
+                <div style="width:66%;height:1px; background:rgb(109, 107, 107);"></div>
+                <span>09:30 - 17:00</span>
+                <div style="width:66%;height:1px; background:rgb(109, 107, 107);"></div>
+
+                <h3 style="color: #FF8521; font-weight:bold;">教練式領導力</h3>
+                <ul>
+                    <li>激發潛能的教練式領導</li>
+                    <li>部屬需要教練式領導的時機</li>
+                    <li>對話的關鍵技巧：讚美與激勵</li>
+                </ul><br>
+                <h3 style="color: #FF8521; font-weight:bold;">教練式領導四流程</h3>
+                <ul>
+                    <li>了解部屬狀態：融入與抽離的提問技巧</li>
+                    <li>建立信賴關係：同理心訓練＋自我表露技術</li>
+                    <li>釐清問題核心：有效溝通的深度探詢</li>
+                    <li>持續成長動能：引導改變的策略</li>
+                </ul>
+            </div>
+
+            <!--右邊-->
+            <div class="col-md-6 col-sm-12">
+                <div class="c2" style="color: white; font-size: 20px;"><br>DAY1 <br>
+                    <div style="width:520%;height:1px; background:#E0E0E0;margin-left: 100px;">
+                    </div>3/26
+                </div>
+                <span style="color: rgb(13, 89, 156);font-size: 25px;font-weight:bold;">團隊經營學
+                </span>
+                <div class="padding4">團隊成員判讀 x 團隊發展策略
+                </div>
+                <p style="margin-left: 120px; line-height: 40px;">林聖修／丞鑫企業管理顧問有限公司創辦人</p>
+                <!-- line -->
+                <div style="width:66%;height:1px; background:rgb(109, 107, 107);"></div>
+                <span>09:30 - 17:00</span>
+                <div style="width:66%;height:1px; background:rgb(109, 107, 107);"></div>
+
+                <h3 style="color: #FF8521; font-weight:bold;">組建核心團隊</h3>
+                <ul>
+                    <li>行為類型辨識與實戰</li>
+                    <li>領導者的自察與突破</li>
+                    <li>團隊管理之動態因應</li>
+                </ul><br>
+                <h3 style=" color: #FF8521; font-weight:bold;">打造團隊動能</h3>
+                <ul>
+                    <li>理想團隊的標準建置</li>
+                    <li>實務案例探討與解析</li>
+                    <li>現有團隊辨識機制化</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- section 3 -->
+    </section>
+
+    <section class="section4">
+        <div style="background-color: #DDBC61">
+            <div class="container">
+                <div class="row">
+                    <div class="sec4">
+                        <div>講 師 介 紹</div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <img style="float:left;width: 200px;" src="images/speaker_01.png" class="">
+                        <div style="font-weight:bold;font-size: 24px;">陳煥庭</div>
+                        <p style="font-weight: bold;font-size: 16px;">起初國際台灣分公司執行長</p>
+                        <p style="font-weight: bold;font-size: 15px;">
+                            國內深層溝通的權威講師，擅長教練式領導與團隊激勵，知識理論和實用技巧同時掌握。一萬場以上授課經歷，合作企業如台積電、星巴克與中國信託等。
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <img style="float:left;width: 200px;" src="images/speaker_02.png" class="">
+                        <div style="font-weight: bold;font-size: 24px;">林聖修</div>
+                        <p style="font-weight: bold;font-size: 16px;">丞鑫企業管理顧問有限公司創辦人</p>
+                        <p style="font-weight: bold;font-size: 15px;">
+                            擅長微行為洞察、教練式引導與情商力管理。以教練思維為核心，行為洞察為動力，協助企業改善組織運作，優化團隊能量。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section5">
+        <div class="sec5">
+            <div style="text-align: center;font-size:35px;color:white;">課 程 資 訊</div>
+        </div>
+        <div style="background-color: #01277A;color:white;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-lg-6;color:white;">
+                        <div>地　點：張榮發國際會議中心 (台北市中正區中山南路11號)</div>
+                        <table>
+                            <caption>
+
+                            </caption>
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th style="color: rgb(187, 18, 18)">一般報名</th>
+                                    <th style="color: rgb(187, 18, 18)">4/17前早鳥報名</th>
+                                    <th style="color: rgb(187, 18, 18)">三人以上團報</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color: navy;">一日票</td>
+                                    <td style="color: navy; font-weight:bold;">每人4,200</td>
+                                    <td style="background-color: crimson;">&nbsp&nbsp&nbsp&nbsp每人3,800</td>
+                                    <td style="color: rgb(190, 3, 3);">&nbsp&nbsp&nbsp&nbsp每人3,600</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: navy;">二日票</td>
+                                    <td style="color: navy; font-weight:bold;">每人8,400</td>
+                                    <td style="background-color: crimson">&nbsp&nbsp&nbsp&nbsp每人7,600</td>
+                                    <td style="color: rgb(190, 3, 3);">&nbsp&nbsp&nbsp&nbsp每人7,000</td>
+                                </tr>
+                                <tr>
+                                    <!-- 本課程附贈精美午餐；每堂贈送《經理人月刊》1期 (6月號起算) -->
+                                    <td colspan="4">本課程附贈精美午餐；每堂贈送《經理人月刊》1期 (6月號起算)</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <p style="margin-right: 110px; font-size: 12px;">活動洽詢：(02)8773-9808 分機355　楊小姐
+                            karen.yang@managertoday.com.tw
+                            客服專線：02-8771-6326　 服務時間：週一到週五9:30~12:30；13:30~17:00
+                        </p>
+                        <p
+                            style="display: inline-block; width: 150px;height:60px;background-color: #ea5902;;border-radius: 4%;text-align: center;padding: 18px;;">
+                            線上報名</p>
+                        <p
+                            style="display: inline-block; width: 150px;height:60px;background-color: #004EA3;;border-radius: 4%;text-align: center;margin-top: 20px;padding: 18px;">
+                            下載報名表</p>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-lg-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m8!1m3!1d14460.45060477718!2d121.5027398!3d25.0302508!3m2!1i1024!2i768!4f13.1!4m6!3e3!4m3!3m2!1d25.0488146!2d121.4629049!4m0!5e0!3m2!1szh-TW!2stw!4v1561536977011!5m2!1szh-TW!2stw"
+                            width="600" height="450" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

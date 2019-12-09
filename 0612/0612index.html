@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* wrap/ wrapper/ container 全世界都用這三個 */
+        #wrap{
+            width: 500px;
+            height: 600px;
+            background: rgb(11, 231, 59);
+        }
+        header{
+            height: 100px;
+            background: rgb(207, 240, 18);
+        }
+        .main{
+            height: 400px;
+            background: rgb(224, 185, 9);
+        }
+        footer{
+            height: 100px;
+            background: rgb(224, 14, 137);
+        }
+    </style>
+</head>
+
+<!-- #wrap>(header>h1{我是標題})+.main{我是內容}+footer>p{我是頁尾} -->
+<!-- 之後p改a才不會空一格 -->
+
+<body>
+    <div id="wrap">
+        <header>
+            <h1>我是標題</h1>
+        </header>
+        <div class="main">我是內容</div>
+        <footer>
+            <a>我是頁尾</a>
+        </footer>
+    </div>
+</body>
+</html>
